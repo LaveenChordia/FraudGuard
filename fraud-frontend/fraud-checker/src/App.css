@@ -1,0 +1,104 @@
+/* Full screen centering */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+  max-height: 95vh;
+}
+
+.title {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #1e40af;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.submit-btn {
+  grid-column: 1 / -1;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.result-card {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 10px;
+}
+
+.result-card p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.fraud {
+  color: red;
+  font-weight: bold;
+}
+
+.not-fraud {
+  color: green;
+  font-weight: bold;
+}
+
+.score {
+  font-weight: bold;
+  color: #0c4a6e;
+}
+
+.error {
+  color: crimson;
+  font-weight: bold;
+}
