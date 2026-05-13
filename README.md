@@ -13,7 +13,7 @@
 
 **Analyse any credit card transaction in under 1 second using a Random Forest model trained on 284,000+ real transactions.**
 
-[View Demo](#-how-to-run) · [Report Bug](../../issues) · [Request Feature](../../issues)
+[View Demo]([#-how-to-run](https://fraud-guard-zeta.vercel.app)) · [Report Bug](../../issues) · [Request Feature](../../issues)
 
 </div>
 
