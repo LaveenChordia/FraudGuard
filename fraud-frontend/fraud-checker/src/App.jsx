@@ -2,6 +2,10 @@ import { useState, useRef } from "react";
 import axios from "axios";
 import "./App.css";
 
+// API URL: uses VITE_API_URL env variable in production (set in Vercel dashboard),
+// falls back to localhost for local development.
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
+
 // ─── Sample Transactions ───────────────────────────────────────────────────
 // Real-world inspired values based on the creditcard dataset patterns.
 // V1–V28 are PCA-transformed features. Amount is in USD.
@@ -149,11 +153,11 @@ export default function App() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5001/predict", payload);
+      const res = await axios.post(`${API_URL}/predict`, payload);
       setResult(res.data);
     } catch (err) {
       if (err.code === "ERR_NETWORK") {
-        setError("🔌 Cannot reach the AI server. Make sure you have started the Python server by running: python3 app.py in the fraud-Backend folder.");
+        setError(`🔌 Cannot reach the AI server at ${API_URL}. Make sure the Python server is running: python3 app.py`);
       } else {
         setError(`Something went wrong: ${err.response?.data?.error || err.message}`);
       }
