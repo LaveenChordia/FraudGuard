@@ -287,6 +287,13 @@ node_modules/
 
 ---
 
+## 👥 Team & Roles
+
+- **[@atharva7577](https://github.com/atharva7577)**: original version, including the Flask prediction API, the Random Forest training script, the Node/Express + PostgreSQL logging service and the first React frontend.
+- **Laveen Chordia ([@LaveenChordia](https://github.com/LaveenChordia))**: product and UI redesign (landing page, sample transactions, risk gauge, plain-English recommendations, FAQ), documentation, and deployment setup on Render + Vercel.
+
+---
+
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
